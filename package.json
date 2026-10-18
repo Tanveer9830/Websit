@@ -1,0 +1,47 @@
+{
+  "name": "top-cloud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Top Cloud \u2014 a complete, secure staff application panel.",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "dev:webpack": "next dev --webpack -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "typecheck": "tsc --noEmit",
+    "topcloud": "node scripts/topcloud.mjs",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:backup": "tsx scripts/backup.ts",
+    "owner:recover": "tsx scripts/owner-recover.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/space-grotesk": "5.3.0",
+    "@libsql/client": "0.18.0",
+    "@node-rs/argon2": "2.2.2",
+    "drizzle-orm": "0.45.4",
+    "next": "15.5.28",
+    "nodemailer": "7.0.13",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.18",
+    "@types/node": "22.18.12",
+    "@types/nodemailer": "7.0.4",
+    "@types/react": "19.1.17",
+    "@types/react-dom": "19.1.7",
+    "dotenv": "16.6.1",
+    "tailwindcss": "4.1.18",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "engines": {
+    "node": ">=20.11"
+  }
+}
